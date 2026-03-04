@@ -10,13 +10,13 @@ const [authToken, setAuthToken] = useState(localStorage.getItem("auth-token") ||
 
     //   make useeffect to pull data from backend and store in "all_product" 
 useEffect(() => {
-         fetch("http://localhost:4000/allproducts")
+         fetch("https://test-ecom-iota.vercel.app/allproducts")
             .then((responce) => responce.json()).then((data) => setAll_Product(data))
 
     // login wali property add on ho rahi hai index.js k no:14 wala route ka kam ho raha hai yahan
 
     if (authToken) {
-        fetch('http://localhost:4000/getcart', {
+        fetch('https://test-ecom-iota.vercel.app/getcart', {
             method: "POST",
             headers: {
                 'auth-token': authToken,
@@ -65,7 +65,7 @@ const login = (tokenFromBackend) => {
         // 1st check the token in local storage is ka matlab hai we are logedin
         if (localStorage.getItem('auth-token')) {
             // if we are login we will update the " itemId" in mongodb
-            fetch('http://localhost:4000/addtocart', {
+            fetch('https://test-ecom-iota.vercel.app/addtocart', {
                 method: "POST",
                 headers: {
                     Accept: "application/form-data",
@@ -87,7 +87,7 @@ const login = (tokenFromBackend) => {
         // remove the cart from database
         if (localStorage.getItem('auth-token')) {
             // if we are login we will update the " itemId" in mongodb
-            fetch('http://localhost:4000/removefromcart ', {
+            fetch('https://test-ecom-iota.vercel.app/removefromcart ', {
                 method: "POST",
                 headers: {
                     Accept: "application/form-data",
