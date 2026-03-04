@@ -24,7 +24,7 @@ const AddProduct = () => {
          let product=productDetails;
         let formData = new FormData();
         formData.append('product',image);
-        await fetch("http://localhost:4000/upload" , {
+        await fetch("https://test-ecom-iota.vercel.app/upload" , {
             method:'POST',
             headers:{
                 Accpect:'application/json'
@@ -37,7 +37,7 @@ const AddProduct = () => {
             product.image=responseData.image_url;
             console.log(product);
             // Now send this product (jo pora aak object hai) to addproduct endpoints
-            await fetch('http://localhost:4000/addproduct' ,{
+            await fetch('https://test-ecom-iota.vercel.app/addproduct' ,{
                 method:"POST",
                 headers:{
                     Accpect:'application/json',
