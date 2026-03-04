@@ -5,7 +5,7 @@ import Items from './Items'
 const Popular = () => {
   const[popularProducts,setPopularProduct]=useState([]);
   useEffect((req ,res)=>{
-     fetch('https://test-ecom-iota.vercel.app/popularinwomen').then((responce)=>responce.json()).then((data)=>setPopularProduct(data))
+     fetch('https://test-ecom-gqfl.vercel.app/popularinwomen').then((responce)=>responce.json()).then((data)=>setPopularProduct(data))
   },[])
   return (
     <div className='popular flex flex-col justify-center items-center mt-10  py-12  '>

@@ -5,7 +5,7 @@ import Items from '../Component/Items'
 const NewCollection = () => {
   const[new_collection,setNew_collection]= useState([]);
   useEffect(()=>{
-     fetch('https://test-ecom-iota.vercel.app/newcollections').then((responce)=>responce.json()).then((data)=>setNew_collection(data))
+     fetch('https://test-ecom-gqfl.vercel.app/newcollections').then((responce)=>responce.json()).then((data)=>setNew_collection(data))
   },[])
   return (
     <div  className=' flex flex-col justify-center items-center mt-8  py-12'>

@@ -4,14 +4,14 @@ import listproduct_remove_icon from '../assets/Admin_Assets/cross_icon.png'
 const ListProduct = () => {
     const [allproducts, setallProducts] = useState([])
     const fetchInfo = async () => {
-        await fetch('https://test-ecom-iota.vercel.app/allproducts').then((res) => res.json()).then((data) => { setallProducts(data) })
+        await fetch('https://test-ecom-gqfl.vercel.app/allproducts').then((res) => res.json()).then((data) => { setallProducts(data) })
     }
     useEffect(() => {
         fetchInfo()
     }, [])
 
     const remove_product=async(id)=>{
-        await fetch('https://test-ecom-iota.vercel.app/removeproduct',{
+        await fetch('https://test-ecom-gqfl.vercel.app/removeproduct',{
             method:'POST',
             headers:{
                 Accept:'application/json',

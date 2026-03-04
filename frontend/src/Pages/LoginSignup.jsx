@@ -21,7 +21,7 @@ const LoginSignup = () => {
   const login=async()=>{
     console.log("submission for login",formData);
     let responceData;
-    await fetch('https://test-ecom-iota.vercel.app/login',{
+    await fetch('https://test-ecom-gqfl.vercel.app/login',{
       method:"POST",
       headers:{
         Accept:'application/form-data',
@@ -43,7 +43,7 @@ const LoginSignup = () => {
    const signup=async()=>{
    console.log("submission for signup",formData);
    let responceData;
-    await fetch('https://test-ecom-iota.vercel.app/signup',{
+    await fetch('https://test-ecom-gqfl.vercel.app/signup',{
       method:"POST",
       headers:{
         Accept:'application/form-data',
